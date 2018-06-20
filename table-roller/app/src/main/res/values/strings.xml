@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">table-roller</string>
+
+    <string name="bottom_nav_actions">Actions</string>
+    <string name="bottom_nav_characters">Characters</string>
+    <string name="bottom_nav_knowledgebase">Knowledgebase</string>
 </resources>
