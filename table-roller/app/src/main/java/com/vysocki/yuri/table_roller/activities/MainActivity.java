@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 new ActionsDiceFragment()).commit();
 
         frameLayout = findViewById(R.id.fragment2_container);
-        frameLayout.setVisibility(View.VISIBLE);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -45,19 +44,16 @@ public class MainActivity extends AppCompatActivity {
                     switch (item.getItemId()) {
                         case R.id.nav_actions:
                             selectedFragment = new ActionsPanelFragment();
-                            frameLayout.setEnabled(true);
                             frameLayout.setVisibility(View.VISIBLE);
                             break;
 
                         case R.id.nav_knowledgebase:
                             selectedFragment = new KnowledgebaseFragment();
-                            frameLayout.setEnabled(false);
                             frameLayout.setVisibility(View.GONE);
                             break;
 
                         case R.id.nav_characters:
                             selectedFragment = new CharactersFragment();
-                            frameLayout.setEnabled(false);
                             frameLayout.setVisibility(View.GONE);
                             break;
                     }
