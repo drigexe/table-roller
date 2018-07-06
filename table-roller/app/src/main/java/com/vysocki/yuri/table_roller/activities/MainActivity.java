@@ -2,22 +2,19 @@ package com.vysocki.yuri.table_roller.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.FrameLayout;
 
 import com.vysocki.yuri.table_roller.R;
-import com.vysocki.yuri.table_roller.fragments.ActionsDiceFragment;
-import com.vysocki.yuri.table_roller.fragments.ActionsPanelFragment;
-import com.vysocki.yuri.table_roller.fragments.CharactersFragment;
-import com.vysocki.yuri.table_roller.fragments.KnowledgebaseFragment;
+
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 public class MainActivity extends AppCompatActivity {
 
-    FrameLayout frameLayout;
+    NavController navController1;
+    NavController navController2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,39 +24,32 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new ActionsPanelFragment()).commit();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment2_container,
-                new ActionsDiceFragment()).commit();
+        navController1 = Navigation.findNavController(this, R.id.nav_host_fragment1);
+        navController2 = Navigation.findNavController(this, R.id.nav_host_fragment2);
+        navController1.navigate(R.id.actionsDiceFragment);
+        navController2.navigate(R.id.actionsPanelFragment);
 
-        frameLayout = findViewById(R.id.fragment2_container);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
 
                     switch (item.getItemId()) {
                         case R.id.nav_actions:
-                            selectedFragment = new ActionsPanelFragment();
-                            frameLayout.setVisibility(View.VISIBLE);
+                            navController1.navigate(R.id.actionsDiceFragment);
+                            navController2.navigate(R.id.actionsPanelFragment);
                             break;
 
                         case R.id.nav_knowledgebase:
-                            selectedFragment = new KnowledgebaseFragment();
-                            frameLayout.setVisibility(View.GONE);
+                            navController2.navigate(R.id.knowledgebaseFragment);
                             break;
 
                         case R.id.nav_characters:
-                            selectedFragment = new CharactersFragment();
-                            frameLayout.setVisibility(View.GONE);
+                            navController2.navigate(R.id.charactersFragment);
                             break;
                     }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
 
                     return true;
                 }
