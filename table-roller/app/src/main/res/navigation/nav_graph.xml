@@ -16,10 +16,10 @@
         android:label="fragment_knowledgebase"
         tools:layout="@layout/fragment_knowledgebase" />
     <fragment
-        android:id="@+id/charactersFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.CharactersFragment"
+        android:id="@+id/charactersListFragment"
+        android:name="com.vysocki.yuri.table_roller.fragments.CharactersListFragment"
         android:label="fragment_characters"
-        tools:layout="@layout/fragment_characters" />
+        tools:layout="@layout/fragment_characters_list" />
     <fragment
         android:id="@+id/actionsDiceFragment"
         android:name="com.vysocki.yuri.table_roller.fragments.ActionsDiceFragment"
@@ -30,4 +30,9 @@
         android:name="com.vysocki.yuri.table_roller.fragments.ActionsPanelFragment"
         android:label="fragment_actions_panel"
         tools:layout="@layout/fragment_actions_panel" />
+    <fragment
+        android:id="@+id/charactersUserFragment"
+        android:name="com.vysocki.yuri.table_roller.fragments.CharactersUserFragment"
+        android:label="fragment_characters_user"
+        tools:layout="@layout/fragment_characters_user" />
 </navigation>

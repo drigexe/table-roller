@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
 
-public class CharactersFragment extends Fragment {
+public class CharactersListFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_characters, container, false);
+        return inflater.inflate(R.layout.fragment_characters_list, container, false);
     }
 }

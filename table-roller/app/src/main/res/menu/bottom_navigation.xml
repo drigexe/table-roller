@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_actions"
+        android:id="@+id/actionsPanelFragment"
         android:icon="@drawable/ic_bottom_nav_actions"
         android:title="@string/bottom_nav_actions" />
 
     <item
-        android:id="@+id/nav_knowledgebase"
+        android:id="@+id/knowledgebaseFragment"
         android:icon="@drawable/ic_bottom_nav_knowledgebase"
         android:title="@string/bottom_nav_knowledgebase" />
 
     <item
-        android:id="@+id/nav_characters"
+        android:id="@+id/charactersListFragment"
         android:icon="@drawable/ic_bottom_nav_characters"
         android:title="@string/bottom_nav_characters" />
 

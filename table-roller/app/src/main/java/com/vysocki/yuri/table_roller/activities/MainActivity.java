@@ -13,8 +13,7 @@ import androidx.navigation.Navigation;
 
 public class MainActivity extends AppCompatActivity {
 
-    NavController navController1;
-    NavController navController2;
+    NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        navController1 = Navigation.findNavController(this, R.id.nav_host_fragment1);
-        navController2 = Navigation.findNavController(this, R.id.nav_host_fragment2);
-        navController1.navigate(R.id.actionsDiceFragment);
-        navController2.navigate(R.id.actionsPanelFragment);
+        setNavController(R.id.nav_host_fragment1);
+        navigateNavController(R.id.actionsDiceFragment);
+        setNavController(R.id.nav_host_fragment2);
+        navigateNavController(R.id.actionsPanelFragment);
 
     }
 
@@ -37,21 +36,37 @@ public class MainActivity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                     switch (item.getItemId()) {
-                        case R.id.nav_actions:
-                            navController1.navigate(R.id.actionsDiceFragment);
-                            navController2.navigate(R.id.actionsPanelFragment);
+                        case R.id.actionsPanelFragment:
+                            setNavController(R.id.nav_host_fragment1);
+                            navigateNavController(R.id.actionsDiceFragment);
+                            setNavController(R.id.nav_host_fragment2);
+                            navigateNavController(R.id.actionsPanelFragment);
                             break;
 
-                        case R.id.nav_knowledgebase:
-                            navController2.navigate(R.id.knowledgebaseFragment);
+                        case R.id.knowledgebaseFragment:
+                            setNavController(R.id.nav_host_fragment2);
+                            navigateNavController(R.id.knowledgebaseFragment);
+                            setNavController(R.id.nav_host_fragment1);
+
                             break;
 
-                        case R.id.nav_characters:
-                            navController2.navigate(R.id.charactersFragment);
+                        case R.id.charactersListFragment:
+                            setNavController(R.id.nav_host_fragment2);
+                            navigateNavController(R.id.charactersListFragment);
+                            setNavController(R.id.nav_host_fragment1);
+                            navigateNavController(R.id.charactersUserFragment);
                             break;
                     }
 
                     return true;
                 }
             };
+
+    public void setNavController(int hostFragment) {
+        this.navController = Navigation.findNavController(this, hostFragment);
+    }
+
+    public void navigateNavController(int fragment) {
+        this.navController.navigate(fragment);
+    }
 }
