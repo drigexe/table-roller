@@ -6,14 +6,14 @@
     <FrameLayout
         android:id="@+id/container_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/container_bottom">
+        android:layout_height="wrap_content">
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/container_bottom"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/container_top">
     </FrameLayout>
 
 </RelativeLayout>
