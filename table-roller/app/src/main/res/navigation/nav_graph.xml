@@ -3,36 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/actionsPanelFragment">
+    app:startDestination="@id/actionsFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.vysocki.yuri.table_roller.activities.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/knowledgebaseFragment"
         android:name="com.vysocki.yuri.table_roller.fragments.KnowledgebaseFragment"
         android:label="fragment_knowledgebase"
         tools:layout="@layout/fragment_knowledgebase" />
+
     <fragment
-        android:id="@+id/charactersListFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.CharactersListFragment"
+        android:id="@+id/actionsFragment"
+        android:name="com.vysocki.yuri.table_roller.fragments.ActionsFragment"
+        android:label="fragment_actions"
+        tools:layout="@layout/fragment_actions" />
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.vysocki.yuri.table_roller.fragments.CharactersFragment"
         android:label="fragment_characters"
-        tools:layout="@layout/fragment_characters_list" />
-    <fragment
-        android:id="@+id/actionsDiceFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.ActionsDiceFragment"
-        android:label="fragment_actions_dice"
-        tools:layout="@layout/fragment_actions_dice" />
-    <fragment
-        android:id="@+id/actionsPanelFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.ActionsPanelFragment"
-        android:label="fragment_actions_panel"
-        tools:layout="@layout/fragment_actions_panel" />
-    <fragment
-        android:id="@+id/charactersUserFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.CharactersUserFragment"
-        android:label="fragment_characters_user"
-        tools:layout="@layout/fragment_characters_user" />
+        tools:layout="@layout/fragment_characters" />
+
 </navigation>

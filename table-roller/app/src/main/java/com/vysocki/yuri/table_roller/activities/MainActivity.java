@@ -23,10 +23,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        setNavController(R.id.nav_host_fragment1);
-        navigateNavController(R.id.actionsDiceFragment);
-        setNavController(R.id.nav_host_fragment2);
-        navigateNavController(R.id.actionsPanelFragment);
+        setNavController(R.id.nav_host_fragment);
 
     }
 
@@ -36,25 +33,16 @@ public class MainActivity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                     switch (item.getItemId()) {
-                        case R.id.actionsPanelFragment:
-                            setNavController(R.id.nav_host_fragment1);
-                            navigateNavController(R.id.actionsDiceFragment);
-                            setNavController(R.id.nav_host_fragment2);
-                            navigateNavController(R.id.actionsPanelFragment);
+                        case R.id.actionsFragment:
+                            navigateNavController(R.id.actionsFragment);
                             break;
 
                         case R.id.knowledgebaseFragment:
-                            setNavController(R.id.nav_host_fragment2);
                             navigateNavController(R.id.knowledgebaseFragment);
-                            setNavController(R.id.nav_host_fragment1);
-
                             break;
 
-                        case R.id.charactersListFragment:
-                            setNavController(R.id.nav_host_fragment2);
-                            navigateNavController(R.id.charactersListFragment);
-                            setNavController(R.id.nav_host_fragment1);
-                            navigateNavController(R.id.charactersUserFragment);
+                        case R.id.charactersFragment:
+                            navigateNavController(R.id.charactersFragment);
                             break;
                     }
 
