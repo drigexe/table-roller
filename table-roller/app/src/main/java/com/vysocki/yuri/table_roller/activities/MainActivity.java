@@ -23,19 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNav = findViewById(R.id.bottom_navigation);
 
-        setNavController(R.id.nav_host_fragment);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(bottomNav, navController);
 
     }
 
-
-    public void setNavController(int hostFragment) {
-        this.navController = Navigation.findNavController(this, hostFragment);
-    }
-
-    public void navigateNavController(int fragment) {
-        this.navController.navigate(fragment);
-    }
 
     public void setBottomNavigationVisibility(boolean visibilityState) {
         if (visibilityState) {
