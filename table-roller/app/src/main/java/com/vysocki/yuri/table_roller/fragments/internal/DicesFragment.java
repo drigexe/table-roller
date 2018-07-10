@@ -1,4 +1,4 @@
-package com.vysocki.yuri.table_roller.fragments;
+package com.vysocki.yuri.table_roller.fragments.internal;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
 
-public class DetailedDicesFragment extends Fragment {
+public class DicesFragment extends Fragment {
 
     @Nullable
     @Override

@@ -1,4 +1,4 @@
-package com.vysocki.yuri.table_roller.fragments;
+package com.vysocki.yuri.table_roller.fragments.internal;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
 
-public class CharactersFragment extends Fragment {
+public class PanelFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_characters, container, false);
+        return inflater.inflate(R.layout.fragment_detailed_panel, container, false);
     }
 }
