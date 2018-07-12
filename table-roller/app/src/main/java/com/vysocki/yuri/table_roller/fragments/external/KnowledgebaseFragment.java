@@ -10,12 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
-import com.vysocki.yuri.table_roller.fragments.internal.DicesFragment;
 import com.vysocki.yuri.table_roller.fragments.internal.KnowledgeListFragment;
 import com.vysocki.yuri.table_roller.fragments.internal.KnowledgeManagerFragment;
-import com.vysocki.yuri.table_roller.fragments.internal.PanelFragment;
+import com.vysocki.yuri.table_roller.interfaces.ExternalFragmentEstablisher;
 
-public class KnowledgebaseFragment extends Fragment {
+public class KnowledgebaseFragment extends Fragment implements ExternalFragmentEstablisher {
 
     FragmentTransaction transaction;
 
@@ -27,11 +26,15 @@ public class KnowledgebaseFragment extends Fragment {
         KnowledgeManagerFragment knowledgeManagerFragment = new KnowledgeManagerFragment();
         KnowledgeListFragment knowledgeListFragment = new KnowledgeListFragment();
 
-        transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(R.id.container_top, knowledgeManagerFragment).commit();
-        transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(R.id.container_bottom, knowledgeListFragment).commit();
+        setChildFragment(R.id.container_top, knowledgeManagerFragment);
+        setChildFragment(R.id.container_bottom, knowledgeListFragment);
 
         return view;
+    }
+
+    @Override
+    public void setChildFragment(int frameLayoutId, Fragment childFragment) {
+        transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(frameLayoutId, childFragment).commit();
     }
 }

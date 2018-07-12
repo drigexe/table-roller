@@ -12,8 +12,9 @@ import android.view.ViewGroup;
 import com.vysocki.yuri.table_roller.R;
 import com.vysocki.yuri.table_roller.fragments.internal.DicesFragment;
 import com.vysocki.yuri.table_roller.fragments.internal.PanelFragment;
+import com.vysocki.yuri.table_roller.interfaces.ExternalFragmentEstablisher;
 
-public class ActionsFragment extends Fragment {
+public class ActionsFragment extends Fragment implements ExternalFragmentEstablisher {
 
     FragmentTransaction transaction;
 
@@ -25,11 +26,15 @@ public class ActionsFragment extends Fragment {
         DicesFragment dicesFragment = new DicesFragment();
         PanelFragment panelFragment = new PanelFragment();
 
-        transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(R.id.container_top, dicesFragment).commit();
-        transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(R.id.container_bottom, panelFragment).commit();
+        setChildFragment(R.id.container_top, dicesFragment);
+        setChildFragment(R.id.container_bottom, panelFragment);
 
         return view;
+    }
+
+    @Override
+    public void setChildFragment(int frameLayoutId, Fragment childFragment) {
+        transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(frameLayoutId, childFragment).commit();
     }
 }

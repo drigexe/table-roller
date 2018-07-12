@@ -4,17 +4,37 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
+import com.vysocki.yuri.table_roller.fragments.internal.CharactersListFragment;
+import com.vysocki.yuri.table_roller.fragments.internal.UserInfoFragment;
+import com.vysocki.yuri.table_roller.interfaces.ExternalFragmentEstablisher;
 
-public class CharactersFragment extends Fragment {
+public class CharactersFragment extends Fragment implements ExternalFragmentEstablisher {
+
+    FragmentTransaction transaction;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_external, container, false);
+        View view = inflater.inflate(R.layout.fragment_external, container, false);
+
+        UserInfoFragment userInfoFragment = new UserInfoFragment();
+        CharactersListFragment charactersListFragment = new CharactersListFragment();
+
+        setChildFragment(R.id.container_top, userInfoFragment);
+        setChildFragment(R.id.container_bottom, charactersListFragment);
+
+        return view;
+    }
+
+    @Override
+    public void setChildFragment(int frameLayoutId, Fragment childFragment) {
+        transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(frameLayoutId, childFragment).commit();
     }
 }
