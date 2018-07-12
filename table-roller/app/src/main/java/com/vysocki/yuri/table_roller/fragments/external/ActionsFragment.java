@@ -15,14 +15,17 @@ import com.vysocki.yuri.table_roller.fragments.internal.PanelFragment;
 
 public class ActionsFragment extends Fragment {
 
+    FragmentTransaction transaction;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_external, container, false);
 
-        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         DicesFragment dicesFragment = new DicesFragment();
         PanelFragment panelFragment = new PanelFragment();
+
+        transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.container_top, dicesFragment).commit();
         transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.container_bottom, panelFragment).commit();
