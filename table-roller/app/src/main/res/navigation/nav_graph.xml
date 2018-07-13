@@ -22,9 +22,9 @@
         android:label="fragment_characters"
         tools:layout="@layout/fragment_external" />
     <fragment
-        android:id="@+id/knowledgeDetail"
-        android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgeDetail"
-        android:label="fragment_knowledge_detail"
-        tools:layout="@layout/fragment_knowledge_detail" />
+        android:id="@+id/knowledgeParticularFragment"
+        android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgeParticularFragment"
+        android:label="fragment_knowledge_particular"
+        tools:layout="@layout/fragment_knowledge_particular" />
 
 </navigation>

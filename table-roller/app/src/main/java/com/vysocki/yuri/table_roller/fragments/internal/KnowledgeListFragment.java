@@ -28,7 +28,7 @@ public class KnowledgeListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                  navController.navigate(R.id.knowledgeDetail);
+                navController.navigate(R.id.knowledgeParticularFragment);
             }
         });
 

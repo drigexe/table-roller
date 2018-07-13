@@ -26,15 +26,25 @@ public class ActionsFragment extends Fragment implements ExternalFragmentEstabli
         DicesFragment dicesFragment = new DicesFragment();
         PanelFragment panelFragment = new PanelFragment();
 
-        setChildFragment(R.id.container_top, dicesFragment);
-        setChildFragment(R.id.container_bottom, panelFragment);
+        setInternalFragment(R.id.container_top, dicesFragment);
+        setInternalFragment(R.id.container_bottom, panelFragment);
 
         return view;
     }
 
     @Override
-    public void setChildFragment(int frameLayoutId, Fragment childFragment) {
+    public void setInternalFragment(int frameLayoutId, Fragment internalFragment) {
         transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(frameLayoutId, childFragment).commit();
+        transaction.add(frameLayoutId, internalFragment).commit();
+    }
+
+    @Override
+    public boolean getTwoPaneMode(int configResourceTwoPaneMode) {
+        return getResources().getBoolean(configResourceTwoPaneMode);
+    }
+
+    @Override
+    public boolean getScreenSize(int configResourceTabletSize) {
+        return getResources().getBoolean(configResourceTabletSize);
     }
 }

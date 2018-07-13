@@ -26,15 +26,26 @@ public class CharactersFragment extends Fragment implements ExternalFragmentEsta
         UserInfoFragment userInfoFragment = new UserInfoFragment();
         CharactersListFragment charactersListFragment = new CharactersListFragment();
 
-        setChildFragment(R.id.container_top, userInfoFragment);
-        setChildFragment(R.id.container_bottom, charactersListFragment);
+        setInternalFragment(R.id.container_top, userInfoFragment);
+        setInternalFragment(R.id.container_bottom, charactersListFragment);
 
         return view;
     }
 
     @Override
-    public void setChildFragment(int frameLayoutId, Fragment childFragment) {
+    public void setInternalFragment(int frameLayoutId, Fragment internalFragment) {
         transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(frameLayoutId, childFragment).commit();
+        transaction.add(frameLayoutId, internalFragment).commit();
     }
+
+    @Override
+    public boolean getTwoPaneMode(int configResourceTwoPaneMode) {
+        return getResources().getBoolean(configResourceTwoPaneMode);
+    }
+
+    @Override
+    public boolean getScreenSize(int configResourceTabletSize) {
+        return getResources().getBoolean(configResourceTabletSize);
+    }
+
 }

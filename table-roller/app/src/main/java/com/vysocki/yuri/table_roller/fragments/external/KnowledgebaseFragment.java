@@ -26,15 +26,25 @@ public class KnowledgebaseFragment extends Fragment implements ExternalFragmentE
         KnowledgeManagerFragment knowledgeManagerFragment = new KnowledgeManagerFragment();
         KnowledgeListFragment knowledgeListFragment = new KnowledgeListFragment();
 
-        setChildFragment(R.id.container_top, knowledgeManagerFragment);
-        setChildFragment(R.id.container_bottom, knowledgeListFragment);
+        setInternalFragment(R.id.container_top, knowledgeManagerFragment);
+        setInternalFragment(R.id.container_bottom, knowledgeListFragment);
 
         return view;
     }
 
     @Override
-    public void setChildFragment(int frameLayoutId, Fragment childFragment) {
+    public void setInternalFragment(int frameLayoutId, Fragment internalFragment) {
         transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(frameLayoutId, childFragment).commit();
+        transaction.add(frameLayoutId, internalFragment).commit();
+    }
+
+    @Override
+    public boolean getTwoPaneMode(int configResourceTwoPaneMode) {
+         return getResources().getBoolean(configResourceTwoPaneMode);
+    }
+
+    @Override
+    public boolean getScreenSize(int configResourceTabletSize) {
+        return getResources().getBoolean(configResourceTabletSize);
     }
 }
