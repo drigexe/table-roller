@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_external" >
         <action
             android:id="@+id/action_knowledgebaseFragment_to_knowledgeInfoFragment"
-            app:destination="@id/knowledgeInfoFragment" />
+            app:destination="@id/knowledgeInfoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
     </fragment>
 
     <fragment
