@@ -9,7 +9,11 @@
         android:id="@+id/knowledgebaseFragment"
         android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgebaseFragment"
         android:label="fragment_knowledgebase"
-        tools:layout="@layout/fragment_external" />
+        tools:layout="@layout/fragment_external" >
+        <action
+            android:id="@+id/action_knowledgebaseFragment_to_knowledgeInfoFragment"
+            app:destination="@id/knowledgeInfoFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/actionsFragment"
@@ -22,9 +26,9 @@
         android:label="fragment_characters"
         tools:layout="@layout/fragment_external" />
     <fragment
-        android:id="@+id/knowledgeParticularFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgeParticularFragment"
-        android:label="fragment_knowledge_particular"
-        tools:layout="@layout/fragment_knowledge_particular" />
+        android:id="@+id/knowledgeInfoFragment"
+        android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgeInfoFragment"
+        android:label="fragment_knowledge_info"
+        tools:layout="@layout/fragment_external" />
 
 </navigation>

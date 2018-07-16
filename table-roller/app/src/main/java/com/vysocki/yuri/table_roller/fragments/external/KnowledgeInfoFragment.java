@@ -8,12 +8,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.vysocki.yuri.table_roller.R;
-import com.vysocki.yuri.table_roller.fragments.internal.KnowledgeParticularInternalFragment;
+import com.vysocki.yuri.table_roller.fragments.internal.KnowledgeInfoInternalFragment;
 import com.vysocki.yuri.table_roller.interfaces.ExternalFragmentEstablisher;
 
-public class KnowledgeParticularFragment extends Fragment implements ExternalFragmentEstablisher {
+public class KnowledgeInfoFragment extends Fragment implements ExternalFragmentEstablisher {
 
     FragmentTransaction transaction;
 
@@ -22,8 +23,8 @@ public class KnowledgeParticularFragment extends Fragment implements ExternalFra
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_external, container, false);
 
-        KnowledgeParticularInternalFragment particularFragment = new KnowledgeParticularInternalFragment();
-        setInternalFragment(R.id.container_top, particularFragment);
+        KnowledgeInfoInternalFragment internalFragment = new KnowledgeInfoInternalFragment();
+        setInternalFragment(R.id.container_bottom, internalFragment);
 
         return view;
     }

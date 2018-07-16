@@ -20,15 +20,14 @@ public class KnowledgeListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_knowledge_list, container, false);
+        final View view = inflater.inflate(R.layout.fragment_knowledge_list, container, false);
 
         Button goButton = view.findViewById(R.id.gobutton);
 
         goButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                navController.navigate(R.id.knowledgeParticularFragment);
+                Navigation.findNavController(view).navigate(R.id.action_knowledgebaseFragment_to_knowledgeInfoFragment);
             }
         });
 

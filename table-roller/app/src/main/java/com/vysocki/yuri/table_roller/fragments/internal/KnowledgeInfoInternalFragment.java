@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
 
-public class KnowledgeParticularInternalFragment extends Fragment {
+public class KnowledgeInfoInternalFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_knowledge_particular, container, false);
+        return inflater.inflate(R.layout.fragment_knowledge_info, container, false);
     }
 }

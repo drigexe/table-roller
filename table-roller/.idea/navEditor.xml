@@ -32,7 +32,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="knowledgeParticularFragment">
+                  <entry key="knowledgeInfoFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -49,9 +49,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-116" />
-                            <option name="y" value="539" />
+                            <option name="x" value="-743" />
+                            <option name="y" value="282" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_knowledgebaseFragment_to_knowledgeInfoFragment2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
