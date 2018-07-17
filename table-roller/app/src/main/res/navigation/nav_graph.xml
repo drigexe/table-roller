@@ -22,11 +22,13 @@
         android:name="com.vysocki.yuri.table_roller.fragments.external.ActionsFragment"
         android:label="fragment_actions"
         tools:layout="@layout/fragment_external" />
+
     <fragment
         android:id="@+id/charactersFragment"
         android:name="com.vysocki.yuri.table_roller.fragments.external.CharactersFragment"
         android:label="fragment_characters"
         tools:layout="@layout/fragment_external" />
+
     <fragment
         android:id="@+id/knowledgeInfoFragment"
         android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgeInfoFragment"
