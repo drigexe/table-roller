@@ -7,6 +7,7 @@
     android:gravity="center">
 
     <GridLayout
+        android:id="@+id/panelGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="3"
@@ -31,6 +32,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon0"
+                    android:tag="1"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -40,6 +42,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText0"
+                    android:tag="-1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -69,6 +72,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon1"
+                    android:tag="2"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -78,6 +82,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText1"
+                    android:tag="-2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -107,6 +112,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon2"
+                    android:tag="3"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -116,6 +122,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText2"
+                    android:tag="-3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -145,6 +152,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon3"
+                    android:tag="4"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -154,6 +162,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText3"
+                    android:tag="-4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -183,6 +192,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon4"
+                    android:tag="5"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -192,6 +202,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText4"
+                    android:tag="-5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -221,6 +232,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon5"
+                    android:tag="6"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -230,6 +242,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText5"
+                    android:tag="-6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -259,6 +272,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon6"
+                    android:tag="7"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -268,6 +282,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText6"
+                    android:tag="-7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -297,6 +312,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon7"
+                    android:tag="8"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -306,6 +322,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText7"
+                    android:tag="-8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
@@ -335,6 +352,7 @@
 
                 <ImageView
                     android:id="@+id/actionIcon8"
+                    android:tag="9"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
@@ -344,6 +362,7 @@
                     android:layout_marginBottom="8dp"/>
                 <TextView
                     android:id="@+id/actionText8"
+                    android:tag="-9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
