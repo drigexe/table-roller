@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/actionsFragment"
-        android:icon="@drawable/ic_bottom_nav_actions"
+        android:icon="@drawable/bottom_nav_actions"
         android:title="@string/bottom_nav_actions" />
 
     <item
         android:id="@+id/knowledgebaseFragment"
-        android:icon="@drawable/ic_bottom_nav_knowledgebase"
+        android:icon="@drawable/bottom_nav_knowledgebase"
         android:title="@string/bottom_nav_knowledgebase" />
 
     <item
         android:id="@+id/charactersFragment"
-        android:icon="@drawable/ic_bottom_nav_characters"
+        android:icon="@drawable/bottom_nav_characters"
         android:title="@string/bottom_nav_characters" />
 
 </menu>

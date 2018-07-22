@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,11 +34,16 @@ public class PanelFragment extends Fragment {
                 imageView = view.findViewWithTag(Integer.toString(i));
                 textView = view.findViewWithTag(Integer.toString(y));
 
-                imageView.setImageResource(R.drawable.action_brain);
-                textView.setText("Some text");
+                setDefaultActionSlot();
             }
         }
 
         return view;
     }
+
+    public void setDefaultActionSlot() {
+        imageView.setImageResource(R.drawable.action_empty);
+        textView.setText(R.string.action_empty);
+    }
+
 }

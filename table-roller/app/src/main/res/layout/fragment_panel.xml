@@ -36,7 +36,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_sword"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -49,7 +48,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Sword attack"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -76,7 +74,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_skull"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -89,7 +86,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Neck romance"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -116,7 +112,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_flash"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -129,7 +124,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Thunderstorm"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -156,7 +150,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_ghost"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -169,7 +162,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Fear"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -196,7 +188,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_meteor"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -209,7 +200,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Meteor"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -236,7 +226,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_paw"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -249,7 +238,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Shape shift"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -276,7 +264,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_snowflake"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -289,7 +276,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Deep freeze"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -316,7 +302,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_leaf"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -329,7 +314,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Healing touch"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
@@ -356,7 +340,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/circle_background"
-                    android:src="@drawable/action_axe"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"/>
@@ -369,7 +352,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:text="Mortal strike"
                     android:textSize="11sp"
                     android:gravity="center"/>
 
