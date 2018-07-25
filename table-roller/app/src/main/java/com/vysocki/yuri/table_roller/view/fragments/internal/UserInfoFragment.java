@@ -1,4 +1,4 @@
-package com.vysocki.yuri.table_roller.fragments.internal;
+package com.vysocki.yuri.table_roller.view.fragments.internal;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

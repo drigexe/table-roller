@@ -1,4 +1,4 @@
-package com.vysocki.yuri.table_roller.fragments.external;
+package com.vysocki.yuri.table_roller.view.fragments.external;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
-import com.vysocki.yuri.table_roller.fragments.internal.DicesFragment;
-import com.vysocki.yuri.table_roller.fragments.internal.PanelFragment;
+import com.vysocki.yuri.table_roller.view.fragments.internal.KnowledgeInfoInternalFragment;
 import com.vysocki.yuri.table_roller.interfaces.ExternalFragmentEstablisher;
 
-public class ActionsFragment extends Fragment implements ExternalFragmentEstablisher {
+public class KnowledgeInfoFragment extends Fragment implements ExternalFragmentEstablisher {
 
     FragmentTransaction transaction;
 
@@ -23,11 +22,8 @@ public class ActionsFragment extends Fragment implements ExternalFragmentEstabli
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_external, container, false);
 
-        DicesFragment dicesFragment = new DicesFragment();
-        PanelFragment panelFragment = new PanelFragment();
-
-        setInternalFragment(R.id.container_top, dicesFragment);
-        setInternalFragment(R.id.container_bottom, panelFragment);
+        KnowledgeInfoInternalFragment internalFragment = new KnowledgeInfoInternalFragment();
+        setInternalFragment(R.id.container_bottom, internalFragment);
 
         return view;
     }

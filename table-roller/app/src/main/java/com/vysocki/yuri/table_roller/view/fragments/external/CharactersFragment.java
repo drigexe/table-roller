@@ -1,4 +1,4 @@
-package com.vysocki.yuri.table_roller.fragments.external;
+package com.vysocki.yuri.table_roller.view.fragments.external;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.vysocki.yuri.table_roller.R;
-import com.vysocki.yuri.table_roller.fragments.internal.KnowledgeListFragment;
-import com.vysocki.yuri.table_roller.fragments.internal.KnowledgeManagerFragment;
+import com.vysocki.yuri.table_roller.view.fragments.internal.CharactersListFragment;
+import com.vysocki.yuri.table_roller.view.fragments.internal.UserInfoFragment;
 import com.vysocki.yuri.table_roller.interfaces.ExternalFragmentEstablisher;
 
-public class KnowledgebaseFragment extends Fragment implements ExternalFragmentEstablisher {
+public class CharactersFragment extends Fragment implements ExternalFragmentEstablisher {
 
     FragmentTransaction transaction;
 
@@ -23,11 +23,11 @@ public class KnowledgebaseFragment extends Fragment implements ExternalFragmentE
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_external, container, false);
 
-        KnowledgeManagerFragment knowledgeManagerFragment = new KnowledgeManagerFragment();
-        KnowledgeListFragment knowledgeListFragment = new KnowledgeListFragment();
+        UserInfoFragment userInfoFragment = new UserInfoFragment();
+        CharactersListFragment charactersListFragment = new CharactersListFragment();
 
-        setInternalFragment(R.id.container_top, knowledgeManagerFragment);
-        setInternalFragment(R.id.container_bottom, knowledgeListFragment);
+        setInternalFragment(R.id.container_top, userInfoFragment);
+        setInternalFragment(R.id.container_bottom, charactersListFragment);
 
         return view;
     }
@@ -40,11 +40,12 @@ public class KnowledgebaseFragment extends Fragment implements ExternalFragmentE
 
     @Override
     public boolean getTwoPaneMode(int configResourceTwoPaneMode) {
-         return getResources().getBoolean(configResourceTwoPaneMode);
+        return getResources().getBoolean(configResourceTwoPaneMode);
     }
 
     @Override
     public boolean getScreenSize(int configResourceTabletSize) {
         return getResources().getBoolean(configResourceTabletSize);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.vysocki.yuri.table_roller.fragments.internal;
+package com.vysocki.yuri.table_roller.view.fragments.internal;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,9 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.vysocki.yuri.table_roller.R;
-import com.vysocki.yuri.table_roller.activities.MainActivity;
+import com.vysocki.yuri.table_roller.model.Action;
 
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 public class KnowledgeListFragment extends Fragment {

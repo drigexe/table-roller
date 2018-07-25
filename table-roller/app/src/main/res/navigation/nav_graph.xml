@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/knowledgebaseFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgebaseFragment"
+        android:name="com.vysocki.yuri.table_roller.view.fragments.external.KnowledgebaseFragment"
         android:label="fragment_knowledgebase"
         tools:layout="@layout/fragment_external" >
         <action
@@ -19,19 +19,19 @@
 
     <fragment
         android:id="@+id/actionsFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.external.ActionsFragment"
+        android:name="com.vysocki.yuri.table_roller.view.fragments.external.ActionsFragment"
         android:label="fragment_actions"
         tools:layout="@layout/fragment_external" />
 
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.external.CharactersFragment"
+        android:name="com.vysocki.yuri.table_roller.view.fragments.external.CharactersFragment"
         android:label="fragment_characters"
         tools:layout="@layout/fragment_external" />
 
     <fragment
         android:id="@+id/knowledgeInfoFragment"
-        android:name="com.vysocki.yuri.table_roller.fragments.external.KnowledgeInfoFragment"
+        android:name="com.vysocki.yuri.table_roller.view.fragments.external.KnowledgeInfoFragment"
         android:label="fragment_knowledge_info"
         tools:layout="@layout/fragment_external" />
 

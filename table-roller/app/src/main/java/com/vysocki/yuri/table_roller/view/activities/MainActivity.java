@@ -1,4 +1,4 @@
-package com.vysocki.yuri.table_roller.activities;
+package com.vysocki.yuri.table_roller.view.activities;
 
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
